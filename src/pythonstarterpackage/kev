@@ -75,3 +75,14 @@ def connect_upnp_device_to_google_home(device):
     else:
         print('Failed to connect device to Google Home.')
 
+        def main():
+    # Scan for UPnP devices on the WiFi network.
+    devices = scan_for_upnp_devices()
+
+    # Connect each UPnP device to Google Home.
+    for device in devices:
+        connect_upnp_device_to_google_home(device)
+
+if __name__ == '__main__':
+    main()
+
